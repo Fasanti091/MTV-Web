@@ -4,13 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
     <title>Document</title>
 </head>
-<body>
-    <h1>Hola</h1>
+<body style="background-color: rgb(255, 113, 113);">
+    <h1 style="text-align: center;">Datos de familiares</h1>
+    <hr>
 
-    {% for familiar in familiares %}
-    <p>{{ familiar.nombre }}</p>
-    {% endfor %}
+    <h2 style="text-align: center;">Hora de ingreso: | {{ datetime }} |</h2>
+
+    <div style="display: flex; justify-content: center; align-items: center;">
+        <div style="float: left; margin:5px; text-align: center;">
+            <h4>| Nombre|</h4>
+            {% for familiar in familiares %}
+                <p>{{ familiar.nombre }}</p>
+             {% endfor %}
+        </div>
+        <div style="float: left; margin:5px; text-align: center;">
+            <h4>| Apellido |</h4>
+            {% for familiar in familiares %}
+                <p>{{ familiar.apellido }}</p>
+             {% endfor %}
+        </div>
+        <div style="float: left; margin:5px; text-align: center;">
+            <h4>| Edad|</h4>
+            {% for familiar in familiares %}
+                <p>{{ familiar.edad }}</p>
+             {% endfor %}
+        </div>
+    </div>
+ 
 </body>
 </html>
