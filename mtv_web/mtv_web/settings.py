@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'aplicacion'
 ]
 
 MIDDLEWARE = [
@@ -54,7 +55,7 @@ ROOT_URLCONF = 'mtv_web.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [r"D:\Estudios\CoderHouse - Python\Trabajos\Projects\MVT-Andres-Santiago-Suarez\mtv_web\mtv_web\templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
