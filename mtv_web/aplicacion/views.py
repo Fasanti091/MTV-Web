@@ -9,13 +9,17 @@ from datetime import datetime
 
 def index(request):
 
-
+    # Traemos la base de datos
     familiares = Familiares.objects.all()
-
+    
+    # Creamos un contexto
     contexto = {'familiares':familiares,"datetime": datetime.now()}
-
+    
+    # Llamamos a index
     plantilla = loader.get_template("index.html")
 
+    # Ponemos el contexto en el index para poder usarlo
     documento = plantilla.render(contexto)
 
+    # Retornamos los archivos
     return HttpResponse(documento)
